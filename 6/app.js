@@ -66,20 +66,6 @@ var queue = [];
 sanPath = findPath("COM", "SAN");
 youPath = findPath("COM", "YOU");
 
-var path = "";
-for (let i = 0; i < sanPath.length; i++){
-    path += sanPath[i] + ", ";
-}
-
-console.log(path);
-
-path = "";
-for (let i = 0; i < youPath.length; i++){
-    path += youPath[i] + ", ";
-}
-
-console.log(path);
-
 var common = 0;
 
 for (let i = 0; i <= Math.min(sanPath.length, youPath.length); i++) {
