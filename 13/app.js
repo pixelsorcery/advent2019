@@ -55,7 +55,6 @@ function run(nums) {
     let buffer = "";
     let i = 0;
     let base = 0;
-    let inputIdx = 0;
     while (1)
     {
         if (nums[i].length <= 2) {
@@ -106,8 +105,7 @@ function run(nums) {
             buffer = "";
 
             op1 = getDestOperand(nums, mode0, i+1, base);
-            nums[op1] = "0";//input[inputIdx];
-            inputIdx++;
+            nums[op1] = "0";
             i += 2;
         } else if (op === 4) {
             // add output code to buffer
@@ -217,9 +215,9 @@ var nums = contents.split(',');
 nums[0] = "2";
 var map = [];
 
-//input = ["0", "0", "0", "1", "1", "1", "1", "1", "1", "1", "0", "-1", "-1"];
 var output = run(nums);
 
+var score = 0;
 printOutput(output);
 
 function printOutput(string2process) {
@@ -232,7 +230,8 @@ function printOutput(string2process) {
         let val =  output[i+2];
 
         if (x === -1 && y === 0) {
-            console.log(val);
+            score = val;
+            //console.log(val);
         } else {
             map[y * width + x] = val;
         }
@@ -245,7 +244,7 @@ function printOutput(string2process) {
         strOut += map[i];
     }
 
-    console.log(strOut + '\n');
+    //console.log(strOut + '\n');
 }
 
-rl.close();
+console.log("part 2: " + score);
