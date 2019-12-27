@@ -1,0 +1,49 @@
+R4   A
+L12
+L8
+R4
+
+L8   B
+R10
+R10
+R6
+
+R4   A
+L12
+L8
+R4
+
+R4   C
+R10
+L12
+
+R4   A
+L12
+L8
+R4
+
+L8   B
+R10
+R10
+R6
+
+R4   A
+L12
+L8
+R4
+
+R4   C
+R10
+L12
+
+L8   B
+R10
+R10
+R6
+
+R4   C
+R10
+L12
+
+
+A,B,A,C,A,B,A,C,B,C
