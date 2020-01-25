@@ -151,7 +151,7 @@ function run(map) {
     return answer;
 }
 
-//console.log("part 1:", run(input));
+console.log("part 1:", run(input));
 
 // part 2: different approach, bfs maze search is too slow for 4 robots at once,
 //         try dfs dijkstra style algo using only key positions
@@ -254,7 +254,7 @@ function run2(map) {
                             answer = state.dist + keyPath[0];
                         } else if (state.dist + keyPath[0] < answer) {
                             answer = state.dist + keyPath[0];
-                            console.log("potential answer:", answer);
+                            //console.log("potential answer:", answer);
                         }
                         continue;
                     }
